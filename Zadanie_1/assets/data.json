@@ -1,0 +1,27 @@
+Data = [
+  {
+    "Nagłówek 1": "Dane 1",
+    "Nagłówek 2": "Dane 2",
+    "Nagłówek 3": "Dane 3"
+  },
+  {
+    "Nagłówek 1": "Dane 4",
+    "Nagłówek 2": "Dane 5",
+    "Nagłówek 3": "Dane 6"
+  },
+  {
+    "Nagłówek 1": "Dane 7",
+    "Nagłówek 2": "Dane 8",
+    "Nagłówek 3": "Dane 9"
+  },
+  {
+    "Nagłówek 1": "Dane 10",
+    "Nagłówek 2": "Dane 11",
+    "Nagłówek 3": "Dane 12"
+  },
+  {
+    "Nagłówek 1": "Dane 13",
+    "Nagłówek 2": "Dane 14",
+    "Nagłówek 3": "Dane 15"
+  }
+]

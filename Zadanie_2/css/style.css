@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper{
+
+}
+
+table{
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 100%;
+	max-width: 20px;
+	min-width: 8em;
+	box-sizing: border-box;
+	border-collapse: collapse;
+	text-align: center;
+}
+table td{
+	padding: 20px;
+}
+table tr:nth-child(odd) td:nth-child(odd),
+table tr:nth-child(even) td:nth-child(even)
+{
+	background-color: black;
+	color: white;
+}
+
