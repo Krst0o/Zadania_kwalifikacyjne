@@ -1,14 +1,22 @@
 var data, mydata;
 var htmlText;
+let indexToCheck;
+let valueToCheck;
+let filteredData;
+document.querySelector("select").addEventListener('select', writeData);
 
 $(document).ready(function (){
 	//zaimportowanie pliku JSON
 	data = JSON.parse(JSON.stringify(Data));
 	
-	writeHeaderData();
 	writeData();
 	$('#inserted-table').html(htmlText);
 });
+
+function writeData(){
+	writeHeaderData();
+	writeValues();
+}
 
 function writeHeaderData(){
 	htmlText = '<table>';
@@ -17,16 +25,16 @@ function writeHeaderData(){
 	htmlText += '</tr>';
 }
 
-function writeData(){
-	for(let i = 0; i < data.length; i++){
+function writeValues(){
+	filteredData = data.filter(function(entry){
+		return entry.Data === $('#selected-data').val();
+	});
+
+	for(let i = 0; i < filteredData.length; i++){
 		htmlText += '<tr>';
-			$.each(data[i], function(index, value){	
+			$.each(filteredData[i], function(index, value){	
 				htmlText += '<td>'+value+'</td>';
-			}).filter(checkYear(index, value));
+			});
 		htmlText += '</tr>';
 	}
-}
-
-function checkYear(index, value){
-	return index == "Data" && value == $('#selected-data').val()
 }
