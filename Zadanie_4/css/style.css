@@ -19,3 +19,6 @@ table th, td{
 .data{
 	width: 100px;
 }
+table tr:hover{
+	font-weight: 700;
+}

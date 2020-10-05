@@ -9,10 +9,11 @@ $(document).ready(function (){
 	writeData();
 });
 
+
 function writeData(){
 	var htmlText = '<table>';
 	htmlText += '<tr>';
-	htmlText += '<th class="lp font-weight-bold">L p</th><th class=" font-weight-bold">Nagłówek</th><th class="data font-weight-bold">Data</th>'
+	htmlText += '<td class="lp">L p</td><td>Nagłówek</td><td class="data">Data</td>';
 	htmlText += '</tr>';
 
 	for(let i = 0; i < data.length; i++){
