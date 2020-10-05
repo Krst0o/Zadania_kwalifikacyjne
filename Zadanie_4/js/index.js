@@ -1,28 +1,32 @@
 var data, mydata;
+var htmlText;
+var filledData;
 
 
 $(document).ready(function (){
 	//zaimportowanie pliku JSON
-	mydata = JSON.stringify(Data);
-	data = JSON.parse(mydata);
+	data = JSON.parse(JSON.stringify(Data));
 	
-	writeData();
+	writeHeaderData();
+	$('#inserted-table').html(htmlText);
 });
 
-
-function writeData(){
-	var htmlText = '<table>';
+function writeHeaderData(){
+	htmlText = '<table>';
 	htmlText += '<tr>';
 	htmlText += '<td class="lp">L p</td><td>Nagłówek</td><td class="data">Data</td>';
 	htmlText += '</tr>';
+}
 
+function writeData(){
 	for(let i = 0; i < data.length; i++){
 		htmlText += '<tr>';
 			$.each(data[i], function(index, value){
 				htmlText += '<td>'+value+'</td>';
-			});
+			}).filter(checkYear(value));
 		htmlText += '</tr>';
 	}
-
-	$('#inserted-table').html(htmlText);
+}
+function checkYear(year){
+	$('#selected-data').value.toString() === year;
 }

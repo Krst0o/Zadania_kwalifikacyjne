@@ -22,3 +22,6 @@ table th, td{
 table tr:hover{
 	font-weight: 700;
 }
+select{
+	margin-top: 20px;
+}
