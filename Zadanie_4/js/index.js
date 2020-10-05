@@ -1,13 +1,12 @@
 var data, mydata;
 var htmlText;
-var filledData;
-
 
 $(document).ready(function (){
 	//zaimportowanie pliku JSON
 	data = JSON.parse(JSON.stringify(Data));
 	
 	writeHeaderData();
+	writeData();
 	$('#inserted-table').html(htmlText);
 });
 
@@ -21,12 +20,13 @@ function writeHeaderData(){
 function writeData(){
 	for(let i = 0; i < data.length; i++){
 		htmlText += '<tr>';
-			$.each(data[i], function(index, value){
+			$.each(data[i], function(index, value){	
 				htmlText += '<td>'+value+'</td>';
-			}).filter(checkYear(value));
+			}).filter(checkYear(index, value));
 		htmlText += '</tr>';
 	}
 }
-function checkYear(year){
-	$('#selected-data').value.toString() === year;
+
+function checkYear(index, value){
+	return index == "Data" && value == $('#selected-data').val()
 }
