@@ -1,0 +1,27 @@
+Data = [
+  {
+    "L.p.": "1",
+    "Nagłówek": "Content 1",
+    "Data": "20.02.2020"
+  },
+  {
+    "L.p.": "2",
+    "Nagłówek": "Content 2",
+    "Data": "20.02.2019"
+  },
+  {
+    "L.p.": "3",
+    "Nagłówek": "Content 3",
+    "Data": "20.02.2020"
+  },
+  {
+    "L.p.": "4",
+    "Nagłówek": "Content 4",
+    "Data": "20.02.2017"
+  },
+  {
+    "L.p.": "5",
+    "Nagłówek": "Content 5",
+    "Data": "20.02.2019"
+  }
+]
